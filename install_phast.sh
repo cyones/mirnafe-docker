@@ -74,8 +74,6 @@ fi
 #Perform the actual install of phast
 if [ "$updatetype" = "apt" ]; then
   echo "We need to run 'apt-get update' now"
-  echo "Press enter to proceed"
-  read proceed
   apt-get update
   echo "Now installing phast via 'apt-get install phast'"
   apt-get install phast
