@@ -14,7 +14,7 @@ COPY phyloFit /usr/bin/
 COPY phyloP /usr/bin/
 COPY PHAST_LICENSE /
     
-RUN DEBIAN_FRONTEND=noninteractive apt-get -y clean && -y apt-get autoclean
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y clean && apt-get -y autoclean
 
 CMD RNAfold --version && \
     clustalo --version && \
