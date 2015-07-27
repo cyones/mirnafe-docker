@@ -10,12 +10,12 @@ RUN DEBIAN_FRONTEND=noninteractive add-apt-repository ppa:j-4/vienna-rna -y
 RUN DEBIAN_FRONTEND=noninteractive apt-get update -y && apt-get install -y vienna-rna
 
 COPY clustalo /usr/bin/
-
-COPY install_phast.sh /
-RUN sh install_phast.sh
+COPY phyloFit /usr/bin/
+COPY phyloP /usr/bin/
+COPY PHAST_LICENSE /
     
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y clean && -y apt-get autoclean
 
 CMD RNAfold --version && \
     clustalo --version && \
-    phyloFit --help
+    phyloFit -h
