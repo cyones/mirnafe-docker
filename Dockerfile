@@ -7,7 +7,8 @@ python-software-properties \
 wget
 
 RUN DEBIAN_FRONTEND=noninteractive add-apt-repository ppa:j-4/vienna-rna -y
-RUN DEBIAN_FRONTEND=noninteractive apt-get update -y && apt-get install -y vienna-rna
+RUN DEBIAN_FRONTEND=noninteractive apt-get update -y && apt-get install -y vienna-rna ncbi-blast+
+
 
 COPY clustalo /usr/bin/
 COPY phyloFit /usr/bin/
