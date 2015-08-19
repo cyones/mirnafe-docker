@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM sinclab/webdemo-base-matlab:latest
 MAINTAINER Cristian A. Yones <cyones@sinc.unl.edu.ar>
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update -y && apt-get install -y \
